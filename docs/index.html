@@ -325,25 +325,70 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2019-02-12</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
-<li>
-<details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/jdblischak/fucci-seq/tree/391ed92fc2c4058dbf3d8dcd4b7dfb6835a0632d" target="_blank">391ed92</a> </summary></p>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-09-06
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>fucci-seq/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjdblischakfucciseqtree0cd345189b05678ae6bf5972d4ec39a489343ee4targetblank0cd3451a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/jdblischak/fucci-seq/tree/0cd345189b05678ae6bf5972d4ec39a489343ee4" target="_blank">0cd3451</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomjdblischakfucciseqtree0cd345189b05678ae6bf5972d4ec39a489343ee4targetblank0cd3451a" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-    Ignored:    analysis/figure/
     Ignored:    code/method-npreg.Rmd/slurm-46123907.out
     Ignored:    code/method-npreg.Rmd/slurm-46123908.out
     Ignored:    code/method-npreg.Rmd/slurm-46123909.out
@@ -363,10 +408,11 @@ Ignored files:
     Ignored:    code/trendfilter-individual.Rmd/slurm-49893754.out
     Ignored:    code/trendfilter-individual.Rmd/slurm-49893755.out
     Ignored:    data/batch-paper/
+    Ignored:    data/cellcycle-genes-previous-studies/cycle_genes/
+    Ignored:    data/cellcycle-genes-previous-studies/rnaseq/
     Ignored:    data/confess-rds/
     Ignored:    data/data-labwebsite/
     Ignored:    data/results/
-    Ignored:    dsc/data/
     Ignored:    notes/
     Ignored:    output/npreg-trendfilter.Rmd/
     Ignored:    output_tmp/
@@ -378,1129 +424,1214 @@ Untracked files:
     Untracked:  analysis/method-eval-leng.Rmd
     Untracked:  analysis/norm-ercc-batch.Rmd
     Untracked:  analysis/norm-ercc-fucci.Rmd
+    Untracked:  analysis/revision.Rmd
+    Untracked:  analysis/revision/
+    Untracked:  analysis/sampleqc_lda.Rmd
+    Untracked:  code/make_paper/
+    Untracked:  output/revision.Rmd/
+
+Unstaged changes:
+    Deleted:    data/cellcycle-genes-previous-studies/rds/leng-2015.rds
+    Deleted:    data/cellcycle-genes-previous-studies/rds/macosko-2015.rds
+    Modified:   data/eset-filtered.rds
+    Modified:   data/eset-final.rds
+    Modified:   data/eset-raw.rds
+    Deleted:    data/rnaseq-previous-studies/bottcher/Column_explanation.txt
+    Deleted:    data/rnaseq-previous-studies/bottcher/FUCCI_cell_experimental metadata.txt
+    Deleted:    data/rnaseq-previous-studies/bottcher/FUCCI_cell_experimental metadata.zip
+    Deleted:    data/rnaseq-previous-studies/bottcher/Fucci_GeneExpression_gencode22_TPM.txt
+    Deleted:    data/rnaseq-previous-studies/bottcher/log2cpm_filtered.rds
+    Deleted:    data/rnaseq-previous-studies/bottcher/log2cpm_quant.rds
+    Deleted:    data/rnaseq-previous-studies/bottcher/pdata_filtered.rds
+    Deleted:    data/rnaseq-previous-studies/buettner/HumanBuettnerTCell.rda
+    Deleted:    data/rnaseq-previous-studies/buettner/MouseBuettnerESC.rda
+    Deleted:    data/rnaseq-previous-studies/leng/HumanLengESC.rds
+    Deleted:    data/rnaseq-previous-studies/leng/log2cpm_quant.rds
+    Deleted:    data/rnaseq-previous-studies/leng/pdata_filtered.rds
+    Deleted:    dsc/code/make_data_intensity.R
+    Deleted:    dsc/code/make_data_log2cpm.R
+    Deleted:    dsc/code/make_data_normed.R
+    Deleted:    dsc/code/make_data_partitions.R
+    Deleted:    dsc/code/make_data_supervised.R
+    Deleted:    dsc/code/makedata_supervised.R
+    Deleted:    dsc/code/makedata_supervised_algetime.R
+    Deleted:    dsc/code/makedata_supervised_triple.R
+    Deleted:    dsc/code/makedata_supervised_triple_algetime.R
+    Deleted:    dsc/code/run_methods.R
+    Deleted:    dsc/code/train_cycle_pve.R
+    Deleted:    dsc/code/training_predict_test.R
+    Deleted:    dsc/code/validation.R
+    Deleted:    dsc/fucci-seq.dsc
+    Deleted:    dsc/workflow.md
+    Modified:   output/method-train-summary-output.Rmd/double_topgenes_mixed.rds
+    Modified:   output/npreg-trendfilter-quantile.Rmd/log2cpm.quant.rds
 
 </code></pre>
+<p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
-</details>
-</li>
-</ul>
-<details>
-<summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 File
 </th>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
-<th style="text-align:left;">
+<th>
 Message
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
-<a href="https://github.com/jdblischak/fucci-seq/blob/391ed92fc2c4058dbf3d8dcd4b7dfb6835a0632d/analysis/index.Rmd" target="_blank">391ed92</a>
+<td>
+<a href="https://github.com/jdblischak/fucci-seq/blob/0cd345189b05678ae6bf5972d4ec39a489343ee4/analysis/index.Rmd" target="_blank">0cd3451</a>
 </td>
-<td style="text-align:left;">
+<td>
+jhsiao999
+</td>
+<td>
+2019-09-06
+</td>
+<td>
+update table of content
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/d848f8eec2e963703ba70ac60af1c2c5d3238298/docs/index.html" target="_blank">d848f8e</a>
+</td>
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-12
 </td>
-<td style="text-align:left;">
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jdblischak/fucci-seq/blob/391ed92fc2c4058dbf3d8dcd4b7dfb6835a0632d/analysis/index.Rmd" target="_blank">391ed92</a>
+</td>
+<td>
+Joyce Hsiao
+</td>
+<td>
+2019-02-12
+</td>
+<td>
 add John’s changes
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/c4f411fec65cddbb1c77213de6d3a847940f18d5/analysis/index.Rmd" target="_blank">c4f411f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-12
 </td>
-<td style="text-align:left;">
+<td>
 move TOC
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/435d656647e71f27cecd19b95b44d6af635535e6/analysis/index.Rmd" target="_blank">435d656</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-12
 </td>
-<td style="text-align:left;">
+<td>
 Merge branch ‘master’ into master
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/435d656647e71f27cecd19b95b44d6af635535e6/docs/index.html" target="_blank">435d656</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/435d656647e71f27cecd19b95b44d6af635535e6/docs/index.html" target="_blank">435d656</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-12
 </td>
-<td style="text-align:left;">
+<td>
 Merge branch ‘master’ into master
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/9c05421ff4a22a6b1300f44fa91d7ecb5a947a0d/analysis/index.Rmd" target="_blank">9c05421</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-12
 </td>
-<td style="text-align:left;">
+<td>
 Merge pull request #57 from jdblischak/download
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/5b3779c8637b57f8e490441c8615c429b02adb8a/analysis/index.Rmd" target="_blank">5b3779c</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2019-02-01
 </td>
-<td style="text-align:left;">
+<td>
 Update workflowr to 1.0.1 with wflow_update().
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/94710940632bf842503ca9e5e0721d1c4635ac58/docs/index.html" target="_blank">9471094</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/94710940632bf842503ca9e5e0721d1c4635ac58/docs/index.html" target="_blank">9471094</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-01-31
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/162f192c2b0a32f0007dd370e4c6491178bea74f/analysis/index.Rmd" target="_blank">162f192</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2019-01-31
 </td>
-<td style="text-align:left;">
+<td>
 build homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/0544e3c6644852720e1ece731f73470494085eb4/docs/index.html" target="_blank">0544e3c</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/0544e3c6644852720e1ece731f73470494085eb4/docs/index.html" target="_blank">0544e3c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-25
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/49ad6fded35d33d40b3b6e248f0721bd02e03e72/analysis/index.Rmd" target="_blank">49ad6fd</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-25
 </td>
-<td style="text-align:left;">
+<td>
 build homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/e3e6dbf381d4da5341e3e080c93be663c8feb4d7/docs/index.html" target="_blank">e3e6dbf</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/e3e6dbf381d4da5341e3e080c93be663c8feb4d7/docs/index.html" target="_blank">e3e6dbf</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-17
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/ff67833216177a6d1e95eb88ab0d9ff938642b0d/analysis/index.Rmd" target="_blank">ff67833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-17
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/453044f1765a48b91429a007205d54ec5d3d53ee/docs/index.html" target="_blank">453044f</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/453044f1765a48b91429a007205d54ec5d3d53ee/docs/index.html" target="_blank">453044f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-12
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/1d8f2140dbfe5203f5b7f5b3c5882fb753f9f977/analysis/index.Rmd" target="_blank">1d8f214</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-12
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/6a46a6b36ab6864c8d3be8c54f2a77db49ad8e99/docs/index.html" target="_blank">6a46a6b</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/6a46a6b36ab6864c8d3be8c54f2a77db49ad8e99/docs/index.html" target="_blank">6a46a6b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-02
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/efaea97399de955e354f399060239467042a7ccd/analysis/index.Rmd" target="_blank">efaea97</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-02
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/c526f3fce30c840237b29744274337977090256b/docs/index.html" target="_blank">c526f3f</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/c526f3fce30c840237b29744274337977090256b/docs/index.html" target="_blank">c526f3f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/78ce6d89e67c9495d17028d2990dcb39031e76fe/analysis/index.Rmd" target="_blank">78ce6d8</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-06-29
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/6a93de390520b8ccce3c279d6d6f563dc9eb661e/docs/index.html" target="_blank">6a93de3</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/6a93de390520b8ccce3c279d6d6f563dc9eb661e/docs/index.html" target="_blank">6a93de3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-06-28
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/63fd7fff52b404c45277eb2bc47fbe9b88cc8141/docs/index.html" target="_blank">63fd7ff</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/63fd7fff52b404c45277eb2bc47fbe9b88cc8141/docs/index.html" target="_blank">63fd7ff</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-06-21
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/5387a9cc6e3be84bcf779dbd8b7f5223b87fa8c5/analysis/index.Rmd" target="_blank">5387a9c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-06-21
 </td>
-<td style="text-align:left;">
+<td>
 update hompage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/3dc9b895c45637db69fcf6e296f19fab25212d4e/docs/index.html" target="_blank">3dc9b89</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/3dc9b895c45637db69fcf6e296f19fab25212d4e/docs/index.html" target="_blank">3dc9b89</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-05-22
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/b4cdf0a94a4b11893eeda97e1c3d6e6588ad6d91/analysis/index.Rmd" target="_blank">b4cdf0a</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-05-22
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/dea875a64605d632f448b3f4d18f6d8dc74e247a/docs/index.html" target="_blank">dea875a</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/dea875a64605d632f448b3f4d18f6d8dc74e247a/docs/index.html" target="_blank">dea875a</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-05-09
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/fec5c5c2ba01dd3228f0e35a90a2be2564968818/analysis/index.Rmd" target="_blank">fec5c5c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-05-08
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/a625a22699329e91f43764a64b9ab6beb1c13947/docs/index.html" target="_blank">a625a22</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/a625a22699329e91f43764a64b9ab6beb1c13947/docs/index.html" target="_blank">a625a22</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-10
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/067340bebab78e4d0bb35b03ce12caeaceea150c/analysis/index.Rmd" target="_blank">067340b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-10
 </td>
-<td style="text-align:left;">
+<td>
 update hompage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/688a3ba945fa96f6c0d4f5b4d3a751319a08ae4f/docs/index.html" target="_blank">688a3ba</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/688a3ba945fa96f6c0d4f5b4d3a751319a08ae4f/docs/index.html" target="_blank">688a3ba</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-15
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/0fc96fdc3b334e21d376b532245ef7bf75efa9c8/analysis/index.Rmd" target="_blank">0fc96fd</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-15
 </td>
-<td style="text-align:left;">
+<td>
 re-organize homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/7205420ca604a3e78b8487bba969c7fcbd32eddc/docs/index.html" target="_blank">7205420</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/7205420ca604a3e78b8487bba969c7fcbd32eddc/docs/index.html" target="_blank">7205420</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-09
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/94d284982f8954133ef19cedaec73cc61470caff/analysis/index.Rmd" target="_blank">94d2849</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-09
 </td>
-<td style="text-align:left;">
+<td>
 update hompage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/e3ecf8394c0bb62037d4540299b62634a5c23eb7/docs/index.html" target="_blank">e3ecf83</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/e3ecf8394c0bb62037d4540299b62634a5c23eb7/docs/index.html" target="_blank">e3ecf83</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-26
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/920c73242fdab687bf97d10f4202455fe14f70a1/analysis/index.Rmd" target="_blank">920c732</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-26
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/d2d3c37400c68712c67f5095ce1cd118474795f8/docs/index.html" target="_blank">d2d3c37</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/d2d3c37400c68712c67f5095ce1cd118474795f8/docs/index.html" target="_blank">d2d3c37</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-22
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/e74c417172813cc80a6507601c3e9fa771e43994/analysis/index.Rmd" target="_blank">e74c417</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-22
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/7d55333f0ec9e4b6d868ff1bc14509c333a6feaf/docs/index.html" target="_blank">7d55333</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/7d55333f0ec9e4b6d868ff1bc14509c333a6feaf/docs/index.html" target="_blank">7d55333</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-08
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/af2ac8bbba44f4a2318d4b118a31c3de9a56c184/analysis/index.Rmd" target="_blank">af2ac8b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-08
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/be18b2f9bbd03745e688545dbc001d89616e765b/docs/index.html" target="_blank">be18b2f</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/be18b2f9bbd03745e688545dbc001d89616e765b/docs/index.html" target="_blank">be18b2f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-08
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/e0ef1bdfc410d5e2a64e4600a0cd8e96cec8caba/analysis/index.Rmd" target="_blank">e0ef1bd</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-08
 </td>
-<td style="text-align:left;">
+<td>
 minor edits
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/3ae09b6e44cbff5eafa3da36cd59c5a7787c4b39/docs/index.html" target="_blank">3ae09b6</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/3ae09b6e44cbff5eafa3da36cd59c5a7787c4b39/docs/index.html" target="_blank">3ae09b6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-07
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/34c35b15c8c86adb60445f69a6d773d47341a21e/analysis/index.Rmd" target="_blank">34c35b1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-07
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/f6c8d2d26bad052fde8b23e2b1bfe42de5c3dfe3/analysis/index.Rmd" target="_blank">f6c8d2d</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-02-01
 </td>
-<td style="text-align:left;">
+<td>
 update homepage
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/5a1ad9ccf4534a12ec5c7563b6d4246c6a90d241/analysis/index.Rmd" target="_blank">5a1ad9c</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-31
 </td>
-<td style="text-align:left;">
+<td>
 Merge remote-tracking branch ‘jhsiao999/master’
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/9fb49f96d10331190331251f87a86f663120f616/docs/index.html" target="_blank">9fb49f9</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/9fb49f96d10331190331251f87a86f663120f616/docs/index.html" target="_blank">9fb49f9</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-31
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/4b1a660a616508fd4d50d80258565253bf42f448/analysis/index.Rmd" target="_blank">4b1a660</a>
 </td>
-<td style="text-align:left;">
+<td>
 pytung
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-31
 </td>
-<td style="text-align:left;">
+<td>
 add analysis of PCA vs techinical factors
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/3909c4cb479043016db824ee4a64b47f09f77f60/analysis/index.Rmd" target="_blank">3909c4c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-30
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/bde6496060a59eae30b6c386eb587e77f29d47ee/docs/index.html" target="_blank">bde6496</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/bde6496060a59eae30b6c386eb587e77f29d47ee/docs/index.html" target="_blank">bde6496</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-21
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/556d50ef8e6f47914214d3ca871721e876c9e39c/analysis/index.Rmd" target="_blank">556d50e</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-21
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/913f2d17505c6206f83f00b93257e96d3ff7f27c/docs/index.html" target="_blank">913f2d1</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/913f2d17505c6206f83f00b93257e96d3ff7f27c/docs/index.html" target="_blank">913f2d1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-14
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/6fbaf59369a6b04d6cc893aa25b2fa1503d31e2c/analysis/index.Rmd" target="_blank">6fbaf59</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-14
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/6e3c938ae1901c36682af448d3ee0457c0e6d524/analysis/index.Rmd" target="_blank">6e3c938</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-11
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/3a4dd7ce95fe28c934f0527f72319f903ee29005/docs/index.html" target="_blank">3a4dd7c</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/3a4dd7ce95fe28c934f0527f72319f903ee29005/docs/index.html" target="_blank">3a4dd7c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Joyce Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-12-01
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/4fcf7d1a41630b3cbd8ffb6795f88002aa5b3922/docs/index.html" target="_blank">4fcf7d1</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/4fcf7d1a41630b3cbd8ffb6795f88002aa5b3922/docs/index.html" target="_blank">4fcf7d1</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/6898149497db323a1a3cbbc40d1779fdfc03bd6d/docs/index.html" target="_blank">6898149</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/6898149497db323a1a3cbbc40d1779fdfc03bd6d/docs/index.html" target="_blank">6898149</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/3d5d19319769cecfd668d00594193995637f2679/analysis/index.Rmd" target="_blank">3d5d193</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-29
 </td>
-<td style="text-align:left;">
+<td>
 Visualize sequencing depth per C1 chip.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/cbaf910c865756c91bdebfa7dfe7635b0d37a6c9/analysis/index.Rmd" target="_blank">cbaf910</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-01
 </td>
-<td style="text-align:left;">
+<td>
 add image QC follow-up to index page
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/cbaf910c865756c91bdebfa7dfe7635b0d37a6c9/docs/index.html" target="_blank">cbaf910</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/cbaf910c865756c91bdebfa7dfe7635b0d37a6c9/docs/index.html" target="_blank">cbaf910</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-01
 </td>
-<td style="text-align:left;">
+<td>
 add image QC follow-up to index page
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/b238da636f6bc13167e3d5e72792a2de53601d52/analysis/index.Rmd" target="_blank">b238da6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-31
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/620ad02bad5e8c495576a7667f13a378894a2ec5/docs/index.html" target="_blank">620ad02</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/620ad02bad5e8c495576a7667f13a378894a2ec5/docs/index.html" target="_blank">620ad02</a>
 </td>
-<td style="text-align:left;">
+<td>
 Chiaowen Hsiao
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-31
 </td>
-<td style="text-align:left;">
+<td>
 preliminary image anaysis, mainly QC
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/bd252b59e6c7abbe993e7c8c1eaa89a40a290008/analysis/index.Rmd" target="_blank">bd252b5</a>
 </td>
-<td style="text-align:left;">
+<td>
 jhsiao999
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-12
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/bd252b59e6c7abbe993e7c8c1eaa89a40a290008/docs/index.html" target="_blank">bd252b5</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/bd252b59e6c7abbe993e7c8c1eaa89a40a290008/docs/index.html" target="_blank">bd252b5</a>
 </td>
-<td style="text-align:left;">
+<td>
 jhsiao999
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-12
 </td>
-<td style="text-align:left;">
+<td>
 update index
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/jdblischak/fucci-seq/f6b94c1d2de7121d9c5bb404dbd6961887e3c78c/docs/index.html" target="_blank">f6b94c1</a>
+<td>
+<a href="https://rawcdn.githack.com/jdblischak/fucci-seq/f6b94c1d2de7121d9c5bb404dbd6961887e3c78c/docs/index.html" target="_blank">f6b94c1</a>
 </td>
-<td style="text-align:left;">
+<td>
 jhsiao999
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-12
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/c8c26544a882e0da3df72844968361253d6a6532/analysis/index.Rmd" target="_blank">c8c2654</a>
 </td>
-<td style="text-align:left;">
+<td>
 jhsiao999
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-12
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(all = TRUE)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/jdblischak/fucci-seq/blob/e7f5236ac24e0234d8325454e56359f3a14caae0/analysis/index.Rmd" target="_blank">e7f5236</a>
 </td>
-<td style="text-align:left;">
+<td>
 John Blischak
 </td>
-<td style="text-align:left;">
+<td>
 2017-10-11
 </td>
-<td style="text-align:left;">
+<td>
 Start workflowr project.
 </td>
 </tr>
 </tbody>
 </table>
-</ul>
-</details>
-<hr />
+</div>
+<hr>
+</div>
+</div>
+</div>
 <p>We used this site to collaborate and share our results. Please feel free to explore. The results that made it into the final paper are in the section <a href="#finalizing">Finalizing</a> below. Here are some useful links:</p>
 <ul>
 <li><a href="doi.org/10.1101/526848">Characterizing and inferring quantitative cell-cycle phase in single-cell RNA-seq data analysis</a></li>
@@ -1519,6 +1650,9 @@ Start workflowr project.
 <li><a href="npreg-trendfilter-quantile.html">Estimate the cyclic trends of gene expression levels</a></li>
 </ul>
 </div>
+<div id="benchmarking" class="section level1">
+<h1>[Benchmarking]</h1>
+</div>
 <div id="analysis" class="section level1">
 <h1>Analysis</h1>
 <div id="supervised-method-learning-finalizing-on-data-holiding-out-validation-samples" class="section level3">
@@ -1526,12 +1660,12 @@ Start workflowr project.
 <ul>
 <li>Perform model training on cell times computed in different ways
 <ul>
-<li>Based on Fucci only
+<li>Based on FUCCI only
 <ul>
 <li>Cells from mixed individuals: <a href="method-train-classifiers-all.html">Prediction error</a>, and <a href="method-train-classifiers-genes.html">functional annotations of genes selected</a></li>
 <li>Cells from one individual: <a href="method-train-ind.html">Prediction error</a>, and <a href="method-train-ind-genes.html">functional annotations of genes selected</a></li>
 </ul></li>
-<li>Based on Fucci and DAPI and derived from trigonometric transformation
+<li>Based on FUCCI and DAPI and derived from trigonometric transformation
 <ul>
 <li>Cells from mixed individuals: <a href="method-train-triple.html">Prediction error</a></li>
 <li>Cells from one individual: <a href="method-train-ind.html">Prediction error</a>, and <a href="method-train-ind-genes.html">functional annotations of genes selected</a></li>
@@ -1692,7 +1826,6 @@ Start workflowr project.
 <li><p>I selected a set of cell cycle <a href="seqdata-select-cellcyclegenes.html">genes that belong to GO term Cell Cycle and looked at the overlap with the detected genes in our data.</a></p></li>
 <li><p><a href="seurat-cellcycle.Rmd">Replicate Seurat example of scoring cell cycle phases</a></p></li>
 <li><p><a href="talk-20180416.html">Reproducing some QC analysis and making plots for a seminar talk</a></p></li>
-<li><p>[Compile codes for the paper in ]</p></li>
 </ul>
 </div>
 </div>
@@ -1733,6 +1866,7 @@ footer is added to webpages before the MathJax javascript. -->
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 -->
+
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
 http://docs.mathjax.org/en/latest/configuration.html.  This will make
@@ -1744,14 +1878,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
-</p>
-<hr>
 
 
 </div>
