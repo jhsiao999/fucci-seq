@@ -2,12 +2,15 @@
 *.rds filter=lfs diff=lfs merge=lfs -text
 *.rda filter=lfs diff=lfs merge=lfs -text
 data/eset/*.rds filter=lfs diff=lfs merge=lfs -text
-output/gene-filtering.Rmd/* filter=lfs diff=lfs merge=lfs -text 
+output/gene-filtering.Rmd/* filter=lfs diff=lfs merge=lfs -text
 
 data/eset-raw.rds filter=lfs diff=lfs merge=lfs -text
 data/eset-final.rds filter=lfs diff=lfs merge=lfs -text
 data/eset-filtered.rds filter=lfs diff=lfs merge=lfs -text
 data/intensity.rds filter=lfs diff=lfs merge=lfs -text
+
+data/sce-raw.rds filter=lfs diff=lfs merge=lfs -text
+data/sce-final.rds filter=lfs diff=lfs merge=lfs -text
 
 output/images-cellcycleR-convergence.Rmd/*rds filter=lfs diff=lfs merge=lfs -text
 data/cellcycle-genes-previous-studies/* filter=lfs diff=lfs merge=lfs -text
@@ -26,6 +29,7 @@ output/npreg.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/npreg-methods.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/npreg-trendfilter-prelim.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/npreg-trendfilter-quantile.Rmd/* filter=lfs diff=lfs merge=lfs -text
+output/npreg-trendfilter-quantile-revision.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/images-time-eval.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-npreg.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-npreg-prelim-results.Rmd/* filter=lfs diff=lfs merge=lfs -text
@@ -40,18 +44,6 @@ output/method-train-ind-genes.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-train-summary.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-train-summary-output.Rmd/* filter=lfs diff=lfs merge=lfs -text
 
-output/method-train-triple.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-validation.Rmd/* filter=lfs diff=lfs merge=lfs -text
-
-output/method-labels-noisy.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-labels-seurat.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-eval-withheld-explore.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-eval-withheld-explore-removenoisy.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-train-classifiers-all.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-train-labels.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-train-labels-equalfold.Rmd/* filter=lfs diff=lfs merge=lfs -text
-output/method-train-summary-output.Rmd/* filter=lfs diff=lfs merge=lfs -text
-
 output/method-train-classifiers-all.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-train-classifiers-genes.Rmd/* filter=lfs diff=lfs merge=lfs -text
 output/method-eval.Rmd/* filter=lfs diff=lfs merge=lfs -text
@@ -60,4 +52,8 @@ output/trendfilter-individual.Rmd/* filter=lfs diff=lfs merge=lfs -text
 
 
 # finalized results
-data/results/* filter=lfs diff=lfs merge=lfs -text
+# data/results/* filter=lfs diff=lfs merge=lfs -text
+
+# revision results
+# analysis/revision/* filter=lfs diff=lfs merge=lfs -text
+
