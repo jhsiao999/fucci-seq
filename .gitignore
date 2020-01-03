@@ -16,3 +16,4 @@ data/batch-paper
 output_tmp/
 notes/
 slurm-*
+anaysis/revision/output/*
